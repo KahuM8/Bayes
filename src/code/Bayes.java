@@ -111,29 +111,29 @@ public class Bayes {
     }
 
     private static Type[] makTypes() {
-        Type[] res = { new Type("no-recurrence-events", createFeatures()),
-                new Type("recurrence-events", createFeatures()) };
+        Type[] res = { new Type("no-recurrence-events", initFeatures()),
+                new Type("recurrence-events", initFeatures()) };
         return res;
     }
 
-    public static Feature[] createFeatures() {
+    public static Feature[] initFeatures() {
         Feature[] features = {
-                createFeature("age", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-89", "90-99"),
-                createFeature("menopause", "lt40", "ge40", "premeno"),
-                createFeature("tumor-size", "0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44",
+                initFeature("age", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-89", "90-99"),
+                initFeature("menopause", "lt40", "ge40", "premeno"),
+                initFeature("tumor-size", "0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44",
                         "45-49", "50-54", "55-59"),
-                createFeature("inv-nodes", "0-2", "3-5", "6-8", "9-11", "12-14", "15-17", "18-20", "21-23", "24-26",
+                initFeature("inv-nodes", "0-2", "3-5", "6-8", "9-11", "12-14", "15-17", "18-20", "21-23", "24-26",
                         "27-29", "30-32", "33-35", "36-39"),
-                createFeature("node-caps", "yes", "no"),
-                createFeature("deg-malig", "1", "2", "3"),
-                createFeature("breast", "left", "right"),
-                createFeature("breast-quad", "left_up", "left_low", "right_up", "right_low", "central"),
-                createFeature("irradiat", "yes", "no")
+                initFeature("node-caps", "yes", "no"),
+                initFeature("deg-malig", "1", "2", "3"),
+                initFeature("breast", "left", "right"),
+                initFeature("breast-quad", "left_up", "left_low", "right_up", "right_low", "central"),
+                initFeature("irradiat", "yes", "no")
         };
         return features;
     }
 
-    private static Feature createFeature(String name, String... values) {
+    private static Feature initFeature(String name, String... values) {
         Feature feature = new Feature(name);
         for (String value : values) {
             feature.addValue(value);
