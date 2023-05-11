@@ -12,29 +12,42 @@ public class Bayes {
             System.out.println("Usage: java Bayes <training-set-file> <test-set-file>");
             System.exit(1);
         }
-
+        String s = "training \n";
         train(Parser.parseData(Parser.readAllLines(args[0])));
+        // string builder stuff
+        s += "          " + types[0].name + ", " + types[1].name + "\n" +
+                "P(Class)  " + types[0].prob + ", " + types[1].prob + "\n\n\n"
+                + "Feature probabilities:\n---------------------\n" + types[0].name + ":\n";
 
-        // test
+        for (Feature feature : types[0].features) {
+            s += feature.toString();
+        }
+
+        s += "\n\n\n" + types[1].name + ":\n";
+        for (Feature feature : types[0].features) {
+            s += feature.toString();
+        }
+
+        s += "\nTesting!!n\n";
         int numInstances = 0;
         double numCorrect = 0;
         for (String[] instance : Parser.parseData(Parser.readAllLines(args[1]))) {
-            System.out.println("Instance " + numInstances + ":");
-
             Type bestClass = getBestClass(instance, List.of(types));
-
-            System.out.print("Best class: " + bestClass.name + ". ");
+            s += ("Instance " + numInstances + ": Best class: " + bestClass.name + ". ");
             if (bestClass.name.equals(instance[1])) {
-                System.out.println("Right!");
+                s += ("Right! \n");
                 numCorrect++;
             } else {
-                System.out.println("wrong!");
+                s += ("wrong! \n");
             }
             numInstances++;
         }
 
         double accuracy = (numCorrect / numInstances) * 100.0;
-        System.out.println("Accuracy: " + accuracy);
+        s += "Accuracy: " + accuracy + "%\n";
+
+        Parser.toFile("output.txt", s);
+        System.out.println(s);
     }
 
     public static void train(String[][] instances) {

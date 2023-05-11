@@ -1,6 +1,8 @@
 package code;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -35,5 +37,18 @@ class Parser {
             variables[i - 1] = lines.get(i).split(",");
         }
         return variables;
+    }
+
+    // to text file
+    public static void toFile(String filename, String content) {
+        try {
+            File f = new File(filename);
+            f.createNewFile();
+            PrintStream out = new PrintStream(f);
+            out.print(content);
+            out.close();
+        } catch (IOException e) {
+            System.err.println("Saving failed " + e);
+        }
     }
 }

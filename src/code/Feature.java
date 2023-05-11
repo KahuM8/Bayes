@@ -28,4 +28,16 @@ public class Feature {
             this.valueProbabilities.put(value, probability);
         }
     }
+
+    @Override
+    public String toString() {
+        String sb = "\n";
+        sb += "P(" + (name) + " | Class)";
+        for (String value : valueProbabilities.keySet()) {
+            sb += ("\n ") + (value) + (": ") + (valueProbabilities.get(value));
+        }
+        sb += ("\n");
+        return sb.toString();
+    }
+
 }
