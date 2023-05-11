@@ -28,7 +28,7 @@ public class Bayes {
                 System.out.println("Right!");
                 numCorrect++;
             } else {
-                System.out.println("Wrong!");
+                System.out.println("wrong!");
             }
             numInstances++;
         }
@@ -54,9 +54,9 @@ public class Bayes {
     }
 
     private static Type getType(String typeName) {
-        for (Type l : types) {
-            if (l.name.equals(typeName)) {
-                return l;
+        for (Type t : types) {
+            if (t.name.equals(typeName)) {
+                return t;
             }
         }
         return null;
