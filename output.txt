@@ -149,8 +149,7 @@ P(irradiat | Class)
  no: 0.8429319371727748
  yes: 0.15706806282722513
 
-Testing...
-
+Testing!!n
 Instance 0: Best class: recurrence-events. wrong! 
 Instance 1: Best class: no-recurrence-events. Right! 
 Instance 2: Best class: no-recurrence-events. Right! 
