@@ -1,5 +1,7 @@
 package code;
 
+import java.util.List;
+
 public class Bayes {
     public static Type[] types = makTypes();
 
@@ -12,16 +14,7 @@ public class Bayes {
         for (String[] instance : Parser.parseData(Parser.readAllLines("breast-cancer-test.csv"))) {
             System.out.println("Instance " + numInstances + ":");
 
-            double bestScore = 0;
-            Type bestClass = null;
-
-            for (Type y : types) {
-                double score = test(instance, y);
-                if (score > bestScore) {
-                    bestScore = score;
-                    bestClass = y;
-                }
-            }
+            Type bestClass = getBestClass(instance, List.of(types));
 
             System.out.print("Best class: " + bestClass.name + ". ");
             if (bestClass.name.equals(instance[1])) {
@@ -56,6 +49,21 @@ public class Bayes {
             }
         }
         return null;
+    }
+
+    private static Type getBestClass(String[] instance, List<Type> types) {
+        double bestScore = 0;
+        Type bestClass = null;
+
+        for (Type y : types) {
+            double score = test(instance, y);
+            if (score > bestScore) {
+                bestScore = score;
+                bestClass = y;
+            }
+        }
+
+        return bestClass;
     }
 
     private static void updateFeatureCounts(Feature feature, String valueName) {
