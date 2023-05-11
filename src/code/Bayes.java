@@ -6,12 +6,19 @@ public class Bayes {
     public static Type[] types = makTypes();
 
     public static void main(String[] args) {
-        train(Parser.parseData(Parser.readAllLines("breast-cancer-training.csv")));
+
+        // check if 2 args
+        if (args.length != 2) {
+            System.out.println("Usage: java Bayes <training-set-file> <test-set-file>");
+            System.exit(1);
+        }
+
+        train(Parser.parseData(Parser.readAllLines(args[0])));
 
         // test
         int numInstances = 0;
         double numCorrect = 0;
-        for (String[] instance : Parser.parseData(Parser.readAllLines("breast-cancer-test.csv"))) {
+        for (String[] instance : Parser.parseData(Parser.readAllLines(args[1]))) {
             System.out.println("Instance " + numInstances + ":");
 
             Type bestClass = getBestClass(instance, List.of(types));
