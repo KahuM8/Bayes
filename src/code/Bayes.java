@@ -45,11 +45,7 @@ public class Bayes {
                 updateFeatureCounts(y.features[i - 2], instance[i]);
             }
         }
-
-        // Calculate the total/denominators.
         int classTotal = calculateClassTotal();
-
-        // Calculate the probabilities from the counting numbers.
         calculateProbabilities(classTotal);
     }
 
