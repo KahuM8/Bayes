@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Bayes {
     public static final Type[] types = makTypes();
+    public static String s = "training \n";
 
     public static void main(String[] args) {
 
@@ -12,7 +13,6 @@ public class Bayes {
             System.out.println("Usage: java Bayes <training-set-file> <test-set-file>");
             System.exit(1);
         }
-        String s = "training \n";
         train(Parser.parseData(Parser.readAllLines(args[0])));
         // string builder stuff
         s += "          " + types[0].name + ", " + types[1].name + "\n" +
@@ -28,7 +28,7 @@ public class Bayes {
             s += feature.toString();
         }
 
-        s += "\nTesting!!n\n";
+        s += "\nTesting!!\n\n";
         int numInstances = 0;
         double numCorrect = 0;
         for (String[] instance : Parser.parseData(Parser.readAllLines(args[1]))) {
@@ -74,7 +74,7 @@ public class Bayes {
     private static Type getBestClass(String[] instance, List<Type> types) {
         double bestScore = 0;
         Type bestClass = null;
-
+        s += "\n";
         for (Type y : types) {
             double score = test(instance, y);
             if (score > bestScore) {
@@ -135,6 +135,8 @@ public class Bayes {
                 break;
             }
         }
+        String b = String.format("%.20f", score);
+        s += (b + " " + y.name + "\n");
         return score;
     }
 
