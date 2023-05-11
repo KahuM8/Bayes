@@ -3,7 +3,7 @@ package code;
 import java.util.List;
 
 public class Bayes {
-    public static Type[] types = makTypes();
+    public static final Type[] types = makTypes();
 
     public static void main(String[] args) {
 
