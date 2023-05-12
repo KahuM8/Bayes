@@ -1,4 +1,4 @@
-This was compiled with java 20
+This was compiled with the ecs machines but should run with anything later than java 17
 
 you can check your java version with the command: java --version
 
@@ -6,7 +6,7 @@ if you have not got that version of java you can recompile it in vscode with you
 you can do this by looking in the explorer column
 go to java projects. if you hover next to where it says java projects click export to jar
 it is a symbol that looks like this   |->
-at the top of the screen where the search bar is there should be a drop down that says Bayes and <Without main class>>
+at the top of the screen where the search bar is there should be a drop down that says Bayes and <Without main class>
 click Bayes
 
 
