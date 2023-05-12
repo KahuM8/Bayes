@@ -2,18 +2,15 @@ This was compiled with java 20
 
 you can check your java version with the command: java --version
 
-if you have not got that version of java you can compile with the following commands:
+if you have not got that version of java you can recompile it in vscode with your version of java.
+you can do this by looking in the explorer column
+go to java projects. if you hover next to where it says java projects click export to jar
+it is a symbol that looks like this   |->
+at the top of the screen where the search bar is there should be a drop down that says Bayes and <Without main class>>
+click Bayes
 
-Open terminal in this location
 
-javac src/code/*.java -d bin
-
-jar cfm Bayes.jar ../manifest.txt code
-
-java -jar Bayes.jar 
-
-pause 
-
+then run the bat file or sh file again
 
 
 
