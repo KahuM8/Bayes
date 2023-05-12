@@ -29,6 +29,11 @@ public class Feature {
         }
     }
 
+    // get total probability of this feature
+    public double getProbability(String value) {
+        return this.valueProbabilities.getOrDefault(value, 0.0);
+    }
+
     @Override
     public String toString() {
         String sb = "\n";

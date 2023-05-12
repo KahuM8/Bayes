@@ -136,7 +136,7 @@ public class Bayes {
                 break;
             }
         }
-        String b = String.format("%.20f", score);
+        String b = String.format("%.20f", score * 100);
         s += (b + " " + y.name + "\n");
         return score;
     }

@@ -152,43 +152,43 @@ P(irradiat | Class)
 Testing!!
 
 
-0.00000401773192413800 no-recurrence-events
-0.00000709664291278216 recurrence-events
+0.00040177319241380010 no-recurrence-events
+0.00070966429127821610 recurrence-events
 Instance 0: Best class: recurrence-events. wrong! 
 
-0.00033365875538186835 no-recurrence-events
-0.00002602102401353459 recurrence-events
+0.03336587553818684000 no-recurrence-events
+0.00260210240135345940 recurrence-events
 Instance 1: Best class: no-recurrence-events. Right! 
 
-0.00004707378797592419 no-recurrence-events
-0.00000097150410777979 recurrence-events
+0.00470737879759241900 no-recurrence-events
+0.00009715041077797865 recurrence-events
 Instance 2: Best class: no-recurrence-events. Right! 
 
-0.00015163354504655905 no-recurrence-events
-0.00001021916579440632 recurrence-events
+0.01516335450465590400 no-recurrence-events
+0.00102191657944063160 recurrence-events
 Instance 3: Best class: no-recurrence-events. Right! 
 
-0.00000434523614378287 no-recurrence-events
-0.00000192059939147517 recurrence-events
+0.00043452361437828700 no-recurrence-events
+0.00019205993914751725 recurrence-events
 Instance 4: Best class: no-recurrence-events. Right! 
 
-0.00060001230728100780 no-recurrence-events
-0.00003880403296274196 recurrence-events
+0.06000123072810078400 no-recurrence-events
+0.00388040329627419630 recurrence-events
 Instance 5: Best class: no-recurrence-events. Right! 
 
-0.00020712793908116880 no-recurrence-events
-0.00007415569159796725 recurrence-events
+0.02071279390811688000 no-recurrence-events
+0.00741556915979672500 recurrence-events
 Instance 6: Best class: no-recurrence-events. Right! 
 
-0.00031504865826699285 no-recurrence-events
-0.00000893476241331077 recurrence-events
+0.03150486582669928500 no-recurrence-events
+0.00089347624133107720 recurrence-events
 Instance 7: Best class: no-recurrence-events. wrong! 
 
-0.00003912394516967167 no-recurrence-events
-0.00006483884504037111 recurrence-events
+0.00391239451696716700 no-recurrence-events
+0.00648388450403711100 recurrence-events
 Instance 8: Best class: recurrence-events. Right! 
 
-0.00004101703929078482 no-recurrence-events
-0.00005283165151437645 recurrence-events
+0.00410170392907848200 no-recurrence-events
+0.00528316515143764500 recurrence-events
 Instance 9: Best class: recurrence-events. Right! 
 Accuracy: 80.0%
