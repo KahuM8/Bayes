@@ -1,4 +1,5 @@
-package code;
+
+package bayes;
 
 import java.util.List;
 

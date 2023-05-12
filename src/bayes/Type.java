@@ -1,4 +1,4 @@
-package code;
+package bayes;
 
 class Type {
     final String name;
