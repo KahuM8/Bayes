@@ -25,7 +25,7 @@ public class Bayes {
         }
 
         s += "\n\n\n" + types[1].name + ":\n";
-        for (Feature feature : types[0].features) {
+        for (Feature feature : types[1].features) {
             s += feature.toString();
         }
 
